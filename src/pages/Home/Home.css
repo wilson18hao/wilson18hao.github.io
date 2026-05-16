@@ -162,15 +162,20 @@
 }
 
 .home-capabilities.section {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.home-projects.section {
+  padding-top: 0.5rem;
 }
 
 .home-capabilities {
-  margin-bottom: var(--section-gap);
+  margin-bottom: 0;
 }
 
 .home-capabilities__title {
-  margin: 0 0 2rem;
+  margin: 0 0 1.5rem;
   font-weight: 500;
 }
 
@@ -186,6 +191,11 @@
 
   .home-capabilities.section {
     padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
+  .home-projects.section {
+    padding-top: 1rem;
   }
 }
 

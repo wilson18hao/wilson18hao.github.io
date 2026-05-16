@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wilson Deng - AI Finance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ccc2dc",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#e8def8",
+                        "on-error": "#ffffff",
+                        "outline": "#7a7582",
+                        "secondary-container": "#e8def8",
+                        "on-surface-variant": "#494551",
+                        "on-primary-fixed-variant": "#4f378a",
+                        "on-surface": "#1c1b1f",
+                        "surface-bright": "#fdf8fd",
+                        "on-secondary-fixed-variant": "#4a4458",
+                        "on-secondary-fixed": "#1e192b",
+                        "on-primary-container": "#e0d2ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#686177",
+                        "tertiary-fixed-dim": "#eeb8c8",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#cbc4d2",
+                        "inverse-primary": "#cfbcff",
+                        "surface-container-low": "#f7f2f8",
+                        "primary-container": "#6750a4",
+                        "tertiary": "#633b48",
+                        "on-background": "#1c1b1f",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffd9e3",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#e9ddff",
+                        "on-primary-fixed": "#22005d",
+                        "secondary": "#625b71",
+                        "inverse-on-surface": "#f4eff5",
+                        "tertiary-container": "#7d5260",
+                        "surface-tint": "#6750a4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffcbda",
+                        "surface-container-high": "#ebe7ec",
+                        "surface": "#fdf8fd",
+                        "primary-fixed-dim": "#cfbcff",
+                        "inverse-surface": "#313034",
+                        "surface-container": "#f1ecf2",
+                        "background": "#fdf8fd",
+                        "on-tertiary-fixed": "#31111d",
+                        "primary": "#4f378a",
+                        "surface-dim": "#ddd9de",
+                        "surface-variant": "#e5e1e7",
+                        "surface-container-highest": "#e5e1e7",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#633b48"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding-desktop": "24px",
+                        "base": "4px",
+                        "container-padding-mobile": "16px",
+                        "section-gap": "80px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Roboto"],
+                        "body-lg": ["Roboto"],
+                        "headline-md": ["Roboto"],
+                        "label-lg": ["Roboto"],
+                        "headline-lg": ["Roboto"],
+                        "body-md": ["Roboto"],
+                        "title-md": ["Roboto"],
+                        "display-lg": ["Roboto"],
+                        "title-lg": ["Roboto"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "500" }],
+                        "display-lg": ["57px", { "lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "400" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Roboto', sans-serif; }
+        .organic-blob {
+            position: absolute;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen relative overflow-x-hidden">
+<!-- Background Organic Shapes -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+<div class="organic-blob bg-primary-container w-[500px] h-[500px] rounded-full top-[-100px] left-[-100px]"></div>
+<div class="organic-blob bg-tertiary-container w-[400px] h-[400px] rounded-full bottom-[20%] right-[-50px]"></div>
+<div class="organic-blob bg-secondary-container w-[600px] h-[600px] rounded-full top-[40%] left-[20%] opacity-20"></div>
+</div>
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl bg-surface-container-low flat no shadows">
+<div class="flex justify-between items-center h-20 px-container-padding-mobile md:px-container-padding-desktop max-w-[1200px] mx-auto">
+<div class="flex items-center gap-4">
+<!-- Monogram Anchor -->
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-lg text-headline-lg font-bold">
+                    WD
+                </div>
+<div class="font-headline-lg text-headline-lg font-bold text-primary">Wilson · 邓伟臣</div>
+</div>
+<div class="hidden md:flex items-center gap-8 font-title-md text-title-md"><a class="text-primary border-b-2 border-primary pb-1 active:scale-95 duration-200" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 rounded-full px-4 py-2 active:scale-95 duration-200" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 rounded-full px-4 py-2 active:scale-95 duration-200" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 rounded-full px-4 py-2 active:scale-95 duration-200" href="#">Contact</a></div>
+<button class="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded-full font-label-lg text-label-lg hover:bg-primary/90 transition-colors">
+                Get in touch
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-[120px] pb-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-[1200px] mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-12 mb-section-gap">
+<div class="flex-1 space-y-6">
+<h1 class="font-display-lg text-display-lg text-primary font-bold leading-tight">
+                    AI Finance · Decision Hub <br/>
+<span class="text-secondary">AI金融·决策中枢</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Translating complex financial data into intuitive, intelligent product experiences. Senior Product Manager specializing in AI-driven investment research and knowledge graphs.
+                </p>
+<div class="flex flex-wrap gap-3 pt-4">
+<span class="px-4 py-1.5 rounded-full border border-outline/30 font-label-md text-label-md text-on-surface bg-surface-container-low">智能投研</span>
+<span class="px-4 py-1.5 rounded-full border border-outline/30 font-label-md text-label-md text-on-surface bg-surface-container-low">知识图谱</span>
+<span class="px-4 py-1.5 rounded-full border border-outline/30 font-label-md text-label-md text-on-surface bg-surface-container-low">NLP</span>
+</div>
+<div class="flex gap-8 pt-6">
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-lg text-primary font-bold">¥8.95M</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant">Revenue Delivered</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-lg text-primary font-bold">85%</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant">Efficiency Uplift</div>
+</div>
+</div>
+</div>
+<!-- Abstract Wireframe Visual -->
+<div class="flex-1 w-full relative"><div class="bg-surface-container-low rounded-[24px] shadow-sm border border-outline-variant/20 relative overflow-hidden h-[400px]"><img alt="Financial Analytics Dashboard" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdQ3U90QnOwmP3Pj0ehqNPb5Z7HksZqYrWlP_xWkrEGg53rlubY31DFVdf9YWqePBco-v8dU7N9sRb1bxgLhcXs2YMNVPytwLHki7xLoJMdKL4Yab8KQ3sxIUowKIDEtKEBLueGPIc6fIe9zsjQUFR_OEyrgujHAknU3xAxQswVfCupWw6qT5UMoVTsxWtVZudnKoTcvU7_428fgamjoBVFMhnd4FNVszrzU5lP1SeWfPKtZgDp0xiK5aEeLukmBf0g4kW15VmAhw"/></div></div>
+</section>
+<!-- Company Pills -->
+<section class="mb-section-gap">
+<h3 class="font-title-md text-title-md text-on-surface-variant mb-6 text-center">Trusted By &amp; Collaborated With</h3>
+<div class="flex flex-wrap justify-center gap-4">
+<div class="px-6 py-3 bg-surface-container rounded-full font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">domain</span>
+                    通联数据 (Datayes)
+                </div>
+<div class="px-6 py-3 bg-surface-container rounded-full font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-size: 20px;">account_balance</span>
+                    金证 (Kingdom)
+                </div>
+<div class="px-6 py-3 bg-surface-container rounded-full font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" style="font-size: 20px;">trending_up</span>
+                    中金 (CICC)
+                </div>
+<div class="px-6 py-3 bg-surface-container rounded-full font-label-lg text-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">savings</span>
+                    招行 (CMB)
+                </div>
+</div>
+</section>
+<!-- Value Cards (Bento Grid Style) -->
+<section class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8 font-medium">Core Capabilities</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-low rounded-[24px] p-8 hover:bg-surface-container transition-colors duration-300 border border-transparent hover:border-outline/10 group cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity translate-x-1/2 -translate-y-1/2"></div>
+<span class="material-symbols-outlined text-primary mb-4 block" style="font-size: 40px; font-variation-settings: 'FILL' 1;">neurology</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-3">Intelligent Research</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Automating data extraction and narrative generation for financial reports, significantly reducing manual analyst workload.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low rounded-[24px] p-8 hover:bg-surface-container transition-colors duration-300 border border-transparent hover:border-outline/10 group cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity translate-x-1/2 -translate-y-1/2"></div>
+<span class="material-symbols-outlined text-secondary mb-4 block" style="font-size: 40px; font-variation-settings: 'FILL' 1;">hub</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-3">Knowledge Graph</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Mapping complex entity relationships in financial markets to uncover hidden risks and investment opportunities.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low rounded-[24px] p-8 hover:bg-surface-container transition-colors duration-300 border border-transparent hover:border-outline/10 group cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-container rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity translate-x-1/2 -translate-y-1/2"></div>
+<span class="material-symbols-outlined text-tertiary mb-4 block" style="font-size: 40px; font-variation-settings: 'FILL' 1;">language</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-3">NLP Solutions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Processing unstructured financial text (news, filings, transcripts) into actionable structured insights.</p>
+</div>
+</div>
+</section>
+<!-- Project Teasers -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium">Selected Projects</h2>
+<a class="font-label-lg text-label-lg text-primary flex items-center gap-1 hover:underline" href="#">
+                    View all projects <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low rounded-[24px] h-[300px] mb-4 flex items-center justify-center relative overflow-hidden border border-outline-variant/20 group-hover:border-primary/30 transition-colors"><img alt="Enterprise Risk Radar Visualization" class="w-full h-full object-cover rounded-[24px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCouNjrlmozrboK85BCMPiWRsgJbIIwNsmBVIQy3EoW421-7bd-Bm5bMU6Az-wHoFXiMJ4FELw5WvlavOZWL5poDyOMg4_dC0UAK3JsZlOfsGI4F7k19EctuV8EshZv0cteHN1vldKCU2RxRxjazb_Yo2XIrX9XXudpNMeoxTuJfzXoHdTUtciFznrSXUJfrwDIpSrXNEc-e3w3z9qqrCVAGnuI969LtmZhOI97QMQUUfJIkQZyuRm03OidqNsJLhN5DxmTazxvfDc"/></div>
+<div class="flex gap-2 mb-2">
+<span class="px-2 py-1 bg-primary-container text-on-primary-container rounded font-label-md text-label-md">Knowledge Graph</span>
+<span class="px-2 py-1 bg-surface-variant text-on-surface-variant rounded font-label-md text-label-md">Risk Management</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 group-hover:text-primary transition-colors">Enterprise Risk Radar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A dynamic entity relationship mapping tool to preemptively identify contagion risks in corporate bond markets.</p>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-low rounded-[24px] h-[300px] mb-4 flex items-center justify-center relative overflow-hidden border border-outline-variant/20 group-hover:border-secondary/30 transition-colors"><img alt="NLP Analysis Visualization" class="w-full h-full object-cover rounded-[24px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4zoUTdq7XXWiCSYHSKelddF03XvQJUEN-hDxrFDTnP6TeP7x3fyOUsvKAEmrk1meTrzXYGrGoqknOx3HsJV9_wLUo_a1V75eQnOE4VoNg1ssz-dQwtBATyoePXbnw9VQIOfjBYIqN93E8TDstKQvBYe4wRQ59CY9oADsIMKUnx-EjCqoILX8TciMnzyebY5WaFOLoEUcpsADqvzk8nktlxceY0mgE325O5LO02t6ThINII05ycz1oX9Vcp3yM0jjpOdzXOOnKJ7s"/></div>
+<div class="flex gap-2 mb-2">
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded font-label-md text-label-md">NLP</span>
+<span class="px-2 py-1 bg-surface-variant text-on-surface-variant rounded font-label-md text-label-md">Automated Reporting</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 group-hover:text-secondary transition-colors">Smart Earnings Summarizer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time NLP extraction of key metrics and sentiment from earnings call transcripts to generate instant analyst briefs.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-surface border-t border-outline-variant/30 flat no shadows w-full py-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-container-padding-mobile md:px-container-padding-desktop max-w-[1200px] mx-auto">
+<div class="font-title-lg text-title-lg font-medium text-on-surface">
+                Wilson · 邓伟臣
+            </div>
+<div class="flex gap-6 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Email</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Resume</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Wilson Deng. Built with purpose.
+            </div>
+</div>
+</footer>
+</body></html>

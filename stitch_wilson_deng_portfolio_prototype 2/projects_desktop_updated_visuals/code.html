@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects - Wilson Deng</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ccc2dc",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#e8def8",
+                        "on-error": "#ffffff",
+                        "outline": "#7a7582",
+                        "secondary-container": "#e8def8",
+                        "on-surface-variant": "#494551",
+                        "on-primary-fixed-variant": "#4f378a",
+                        "on-surface": "#1c1b1f",
+                        "surface-bright": "#fdf8fd",
+                        "on-secondary-fixed-variant": "#4a4458",
+                        "on-secondary-fixed": "#1e192b",
+                        "on-primary-container": "#e0d2ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#686177",
+                        "tertiary-fixed-dim": "#eeb8c8",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#cbc4d2",
+                        "inverse-primary": "#cfbcff",
+                        "surface-container-low": "#f7f2f8",
+                        "primary-container": "#6750a4",
+                        "tertiary": "#633b48",
+                        "on-background": "#1c1b1f",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffd9e3",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#e9ddff",
+                        "on-primary-fixed": "#22005d",
+                        "secondary": "#625b71",
+                        "inverse-on-surface": "#f4eff5",
+                        "tertiary-container": "#7d5260",
+                        "surface-tint": "#6750a4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#ffcbda",
+                        "surface-container-high": "#ebe7ec",
+                        "surface": "#fdf8fd",
+                        "primary-fixed-dim": "#cfbcff",
+                        "inverse-surface": "#313034",
+                        "surface-container": "#f1ecf2",
+                        "background": "#fdf8fd",
+                        "on-tertiary-fixed": "#31111d",
+                        "primary": "#4f378a",
+                        "surface-dim": "#ddd9de",
+                        "surface-variant": "#e5e1e7",
+                        "surface-container-highest": "#e5e1e7",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#633b48"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding-desktop": "24px",
+                        "base": "4px",
+                        "container-padding-mobile": "16px",
+                        "section-gap": "80px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Roboto"],
+                        "body-lg": ["Roboto"],
+                        "headline-md": ["Roboto"],
+                        "label-lg": ["Roboto"],
+                        "headline-lg": ["Roboto"],
+                        "body-md": ["Roboto"],
+                        "title-md": ["Roboto"],
+                        "display-lg": ["Roboto"],
+                        "title-lg": ["Roboto"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "500" }],
+                        "display-lg": ["57px", { "lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "400" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- Organic Background Blur -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-container opacity-20 blur-[100px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-tertiary-container opacity-10 blur-[120px]"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-xl fixed top-0 w-full z-50 bg-surface-container-low dark:bg-surface-container-low">
+<div class="flex justify-between items-center h-20 px-container-padding-mobile md:px-container-padding-desktop max-w-[1200px] mx-auto">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-title-lg text-title-lg font-bold">
+                    WD
+                </div>
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim hidden sm:block">Wilson · 邓伟臣</span>
+</div>
+<div class="hidden md:flex gap-6 items-center"><a class="font-title-md text-title-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary/5 dark:hover:bg-primary-fixed-dim/5 rounded-full px-4 py-2" href="#">Home</a>
+<a class="font-title-md text-title-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 px-4 py-2 active:scale-95 duration-200" href="#">Projects</a>
+<a class="font-title-md text-title-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary/5 dark:hover:bg-primary-fixed-dim/5 rounded-full px-4 py-2" href="#">About</a>
+<a class="font-title-md text-title-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary/5 dark:hover:bg-primary-fixed-dim/5 rounded-full px-4 py-2" href="#">Contact</a></div>
+<button class="bg-primary text-on-primary rounded-full px-6 py-2.5 font-label-lg text-label-lg hover:bg-primary/90 transition-colors hidden sm:block active:scale-95 duration-200">
+                Get in touch
+            </button>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-[1200px] mx-auto w-full">
+<!-- Header -->
+<header class="mb-12">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Enterprise AI Products</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A portfolio of transformative financial products, driving efficiency and insights through intelligent automation and refined user experiences.
+            </p>
+</header>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card 1 (Featured) -->
+<article class="bg-surface-container rounded-[24px] overflow-hidden flex flex-col group relative ring-2 ring-primary transition-all hover:shadow-md">
+<div class="h-48 bg-surface-variant relative overflow-hidden flex items-center justify-center border-b border-outline-variant/20"><img alt="Financial Analytics Dashboard" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdQ3U90QnOwmP3Pj0ehqNPb5Z7HksZqYrWlP_xWkrEGg53rlubY31DFVdf9YWqePBco-v8dU7N9sRb1bxgLhcXs2YMNVPytwLHki7xLoJMdKL4Yab8KQ3sxIUowKIDEtKEBLueGPIc6fIe9zsjQUFR_OEyrgujHAknU3xAxQswVfCupWw6qT5UMoVTsxWtVZudnKoTcvU7_428fgamjoBVFMhnd4FNVszrzU5lP1SeWfPKtZgDp0xiK5aEeLukmBf0g4kW15VmAhw"/></div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">CICC Insight (中金点睛)</h2>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label-md text-label-md shrink-0">¥3.0M Value</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="border border-outline px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Standardization</span>
+<span class="border border-outline px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Research Template</span>
+</div>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-2 mb-8 flex-grow">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]" data-icon="check_circle">check_circle</span> Delivered standardized research template system.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-[20px]" data-icon="check_circle">check_circle</span> Improved authoring efficiency across departments.</li>
+</ul>
+<button class="text-primary font-label-lg text-label-lg flex items-center gap-2 hover:bg-primary/5 w-fit px-4 py-2 rounded-full transition-colors mt-auto group-hover:bg-primary-container group-hover:text-on-primary-container">
+                        View case study <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-low rounded-[24px] overflow-hidden flex flex-col hover:bg-surface-container hover:ring-1 hover:ring-outline/12 transition-all">
+<div class="h-48 bg-surface-variant relative overflow-hidden flex items-center justify-center border-b border-outline-variant/20"><img alt="Knowledge Graph and AI Neural Network" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP1zS5DaI6mR4BbAK9F7LHNtHcpXO_mO1dR0g0yLJN5eSIxCuJ0sMNt8P7JSfGwKp5CNDvbUuzrfkm6XBsfL9wNSd1yRHCVJ2XNOlZtn5ox0AezKduMccNASRN2QH-XL8cD-iJ3Kf287ZGS1IgmujzdSxfR5Duf-CHtwfAN8PPTGrr4X1YyclG0mJVPOYd6GUuXJGrkSHr-aKjsYrd6aP9ZDf3zcjekGNta9jB0WX_f4oRYyL5JVxmwXoUTyqY7_b9tkVej-o6po0"/></div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">CMB Research Platform<br/><span class="text-title-md text-on-surface-variant">(招行研究平台)</span></h2>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md shrink-0">¥3.8M Value</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="border border-outline px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Platform Scale</span>
+<span class="border border-outline px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">80k Users</span>
+</div>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-2 mb-8 flex-grow">
+<li class="flex gap-2"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle">check_circle</span> Scaled platform to support 80,000 active users.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle">check_circle</span> Streamlined research distribution and discovery.</li>
+</ul>
+<button class="text-primary font-label-lg text-label-lg flex items-center gap-2 hover:bg-primary/5 w-fit px-4 py-2 rounded-full transition-colors mt-auto">
+                        View case study <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-low rounded-[24px] overflow-hidden flex flex-col hover:bg-surface-container hover:ring-1 hover:ring-outline/12 transition-all">
+<div class="h-48 bg-surface-variant relative overflow-hidden flex items-center justify-center border-b border-outline-variant/20"><img alt="Natural Language Processing Visualization" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4zoUTdq7XXWiCSYHSKelddF03XvQJUEN-hDxrFDTnP6TeP7x3fyOUsvKAEmrk1meTrzXYGrGoqknOx3HsJV9_wLUo_a1V75eQnOE4VoNg1ssz-dQwtBATyoePXbnw9VQIOfjBYIqN93E8TDstKQvBYe4wRQ59CY9oADsIMKUnx-EjCqoILX8TciMnzyebY5WaFOLoEUcpsADqvzk8nktlxceY0mgE325O5LO02t6ThINII05ycz1oX9Vcp3yM0jjpOdzXOOnKJ7s"/></div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">Sunshine Insurance Insight<br/><span class="text-title-md text-on-surface-variant">(阳光保险 Insight)</span></h2>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md shrink-0">¥2.8M Value</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="border border-outline px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Performance</span>
+<span class="border border-outline px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Management</span>
+</div>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-2 mb-8 flex-grow">
+<li class="flex gap-2"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle">check_circle</span> Built robust performance management dashboards.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle">check_circle</span> Enabled data-driven decision making for executives.</li>
+</ul>
+<button class="text-primary font-label-lg text-label-lg flex items-center gap-2 hover:bg-primary/5 w-fit px-4 py-2 rounded-full transition-colors mt-auto">
+                        View case study <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-low rounded-[24px] overflow-hidden flex flex-col hover:bg-surface-container hover:ring-1 hover:ring-outline/12 transition-all">
+<div class="h-48 bg-surface-variant relative overflow-hidden flex items-center justify-center border-b border-outline-variant/20"><img alt="Enterprise Risk Monitoring Dashboard" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCouNjrlmozrboK85BCMPiWRsgJbIIwNsmBVIQy3EoW421-7bd-Bm5bMU6Az-wHoFXiMJ4FELw5WvlavOZWL5poDyOMg4_dC0UAK3JsZlOfsGI4F7k19EctuV8EshZv0cteHN1vldKCU2RxRxjazb_Yo2XIrX9XXudpNMeoxTuJfzXoHdTUtciFznrSXUJfrwDIpSrXNEc-e3w3z9qqrCVAGnuI969LtmZhOI97QMQUUfJIkQZyuRm03OidqNsJLhN5DxmTazxvfDc"/></div>
+<div class="p-6 flex-grow flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">HKEX Project<br/><span class="text-title-md text-on-surface-variant">(港交所项目)</span></h2>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md shrink-0">Data Scale</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="border border-outline px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">Risk Monitoring</span>
+<span class="border border-outline px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant">2.3M Articles</span>
+</div>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-2 mb-8 flex-grow">
+<li class="flex gap-2"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle">check_circle</span> Processed and monitored over 2.3 million articles.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-secondary text-[20px]" data-icon="check_circle">check_circle</span> Implemented early-warning risk detection algorithms.</li>
+</ul>
+<button class="text-primary font-label-lg text-label-lg flex items-center gap-2 hover:bg-primary/5 w-fit px-4 py-2 rounded-full transition-colors mt-auto">
+                        View case study <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface w-full py-10 border-t border-outline-variant/30 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-container-padding-mobile md:px-container-padding-desktop max-w-[1200px] mx-auto">
+<span class="font-title-lg text-title-lg font-medium text-on-surface dark:text-on-surface opacity-80">
+                © 2024 Wilson Deng. Built with purpose.
+            </span>
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="#">Email</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="#">Resume</a>
+</div>
+</div>
+</footer>
+</body></html>

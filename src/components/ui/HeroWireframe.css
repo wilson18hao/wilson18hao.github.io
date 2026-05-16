@@ -1,0 +1,59 @@
+.wireframe {
+  background: var(--surface-container);
+  border-radius: var(--radius-card);
+  padding: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--outline) 12%, transparent);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wireframe__toolbar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wireframe__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--outline) 35%, transparent);
+}
+
+.wireframe__chart {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--surface-container-low);
+  border-radius: 12px;
+}
+
+.wireframe__bar {
+  flex: 1;
+  border-radius: 8px 8px 0 0;
+  background: color-mix(in srgb, var(--outline) 25%, transparent);
+  min-height: 20%;
+}
+
+.wireframe__bar--accent {
+  background: color-mix(in srgb, var(--primary-container) 60%, transparent);
+}
+
+.wireframe__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wireframe__row {
+  height: 10px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--outline) 20%, transparent);
+}
+
+.wireframe__row--short {
+  width: 60%;
+}

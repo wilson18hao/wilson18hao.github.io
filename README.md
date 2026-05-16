@@ -1,45 +1,61 @@
-# Wilson Deng Portfolio
+# Wilson Deng · 邓伟臣 | AI + Financial Product Manager
 
-Personal portfolio site built with React, TypeScript, Vite, and GitHub Pages.
+A high-fidelity personal portfolio website showcasing expertise in AI-driven financial products, knowledge graphs, and NLP solutions. Built with a focus on Material You design principles and fluid animations.
 
-## Development
+[Live Demo](https://wilson18hao.github.io/)
 
-```bash
-npm install
-npm run dev
-```
+## 🚀 Tech Stack
 
-## Build
+- **Framework**: React 19 + TypeScript
+- **Build Tool**: Vite 8
+- **Styling**: CSS Variables (Material You Design System)
+- **Animations**: `motion/react` (Framer Motion) + Custom Rotating Text
+- **Deployment**: GitHub Pages (via GitHub Actions)
 
-```bash
-npm run build
-```
+## 🛠️ Project Structure
 
-The production build is written to `docs/` (static HTML, JS, CSS).
+- `src/data/site.ts`: Centralized content management.
+- `src/components/ui/`: Reusable Material Design 3 components.
+- `src/styles/tokens.css`: Design tokens for colors, spacing, and typography.
+- `docs/`: Production build output for GitHub Pages.
 
-## GitHub Pages (recommended: GitHub Actions)
+## 💻 Local Development
 
-Use **GitHub Actions** as the Pages source so the live site always serves the built `docs/` output (avoids accidentally publishing repo **root**, which contains the Vite dev `index.html` that points at `/src/main.tsx` and causes a **white screen**).
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-1. Repo **Settings → Pages → Build and deployment**
-2. Set **Source** to **GitHub Actions** (not “Deploy from a branch”)
-3. Push to `main`; the workflow **Deploy GitHub Pages** builds and publishes the `docs/` artifact
+2. **Start development server**:
+   ```bash
+   npm run dev
+   ```
 
-Live site: `https://wilson18hao.github.io/`
+3. **Build for production**:
+   ```bash
+   npm run build
+   ```
 
-## Alternative: publish from the `/docs` folder on `main`
+## 🌐 Deployment to GitHub Pages
 
-If you use **Deploy from a branch** instead of Actions:
+This project is configured to deploy automatically via **GitHub Actions**.
 
-- Branch: `main`
-- Folder: **`/docs`** (must be `/docs`, **not** `/ (root)`)
+### Recommended Setup (GitHub Actions)
+1. Go to your repository **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Every push to the `main` branch will trigger the `.github/workflows/deploy-pages.yml` workflow, which builds the project and deploys the `docs/` folder.
 
-If you pick **`/(root)`**, GitHub serves the development `index.html` at the repository root, which loads `/src/main.tsx`. That file is not part of the production build, so the app fails and you see a **white screen**.
+### Manual Alternative (Deploy from branch)
+If you prefer manual deployment:
+1. Set **Source** to **Deploy from a branch**.
+2. Select branch `main` and folder **`/docs`**.
+   *Note: Do NOT select `/(root)`, as it will cause a white screen in production.*
 
-## Push with a specific SSH key (optional)
+## 📮 Contact
 
-```bash
-npm run push:github
-```
+- **Email**: 90@example.com (Placeholder)
+- **Phone**: 130-0000-0000 (Placeholder)
+- **Location**: Beijing, China
 
-Uses `~/.ssh/id_ed25519` via `GIT_SSH_COMMAND`.
+---
+Built with purpose by Wilson Deng.
